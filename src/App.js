@@ -1,7 +1,11 @@
+import Form from "./components/form";
+import Logo from "./components/logo";
+
 function App() {
   return (
-    <div className="App">
-      <h1>🏝️Far Away🧳</h1>
+    <div>
+      <Logo />
+      <Form />
     </div>
   );
 }
