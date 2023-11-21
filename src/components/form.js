@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../index.css";
-export default function Form() {
+export default function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -12,6 +13,7 @@ export default function Form() {
     console.log(newItem);
     setDescription("");
     setQuantity(1);
+    onAddItems(newItem);
   }
   return (
     <form className="add-form" onSubmit={handleSubmit}>
