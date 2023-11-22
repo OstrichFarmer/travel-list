@@ -8,12 +8,12 @@ import Item from "./item";
 //   { id: 4, description: "laptop", quantity: 1, packed: true },
 // ];
 
-export default function PackingList({ items }) {
+export default function PackingList({ items, onDeleteItem }) {
   return (
     <div className="list">
       <ul>
         {items.map((item) => (
-          <Item item={item} key={item.id} />
+          <Item item={item} onDeleteItem={onDeleteItem} key={item.id} />
         ))}
       </ul>
     </div>
