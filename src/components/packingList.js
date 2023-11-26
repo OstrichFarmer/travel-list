@@ -1,13 +1,6 @@
 import "../index.css";
 import Item from "./item";
 
-// const initialItems = [
-//   { id: 1, description: "Passports", quantity: 2, packed: false },
-//   { id: 2, description: "Socks", quantity: 10, packed: true },
-//   { id: 3, description: "charger", quantity: 1, packed: false },
-//   { id: 4, description: "laptop", quantity: 1, packed: true },
-// ];
-
 export default function PackingList({ items, onDeleteItem, onToggleItem }) {
   return (
     <div className="list">
@@ -21,6 +14,14 @@ export default function PackingList({ items, onDeleteItem, onToggleItem }) {
           />
         ))}
       </ul>
+
+      <div className="actions">
+        <select>
+          <option value="input">Sort by input order</option>{" "}
+          <option value="description">Sort by input description</option>{" "}
+          <option value="packed">Sort by packed status</option>
+        </select>
+      </div>
     </div>
   );
 }
